@@ -1,0 +1,982 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.5.0/css/perfect-scrollbar.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.5.0/css/perfect-scrollbar.min.css" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.5.0/js/perfect-scrollbar.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+    <script defer src="js/tooltip.js"></script>
+    <title>Tikipedia</title>
+</head>
+<body>
+
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark py-3">
+            <section class="container">
+                <a href="#" class="navbar-brand title">Tikipedia</a>
+
+                <section class="collapse navbar-collapse" id="navmenu">
+
+                    <!-- Search Bar Group -->
+                    <section class="input-group ms-auto search-bar d-lg-flex d-none">
+                        <i class="bi bi-search input-group-text"></i>
+                        <input type="text" class="form-control bg-dark text-light">
+                        <button class="btn btn-secondary">Search</button>
+                    </section>
+
+                    <!-- Navigation Link-->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Create Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Log in</a>
+                        </li>
+                    </ul>
+                </section>
+                
+                <!-- DropDown Menu Link -->
+                <section class="dropdown px-lg-3">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                        <!-- <i class="navbar-toggler-icon"></i> -->Categories
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark dropdown-panel" data-ps-id="dropdown-menu">
+                        <li>
+                            <a href="#" class="dropdown-item d-md-none">Create Account</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item d-md-none">Log In</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider d-md-none">
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item active">Main page</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Content</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Current Events</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Random article</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">About Wikipedia</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Contact us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Donate</a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h1 class="dropdown-header h1">Contribute</h1></li>
+                        <li>
+                            <a href="#" class="dropdown-item">Help</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Learn to edit</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Community portal</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Recent Changes</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Upload file</a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h1 class="dropdown-header hi">Tools</h1></li>
+                        <li>
+                            <a href="#" class="dropdown-item">What links here</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Related changes</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Special changes</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Permanent link</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Page information</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Tikidata item</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <h1 class="dropdown-header hi">Print/export</h1>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Download as PDF</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Printable version</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <h1 class="dropdown-header hi">In other projects</h1>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Tikipedia Commons</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">MediaTiki</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Meta-Tiki</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Multilingual Tikisource</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Tikispecies</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Tikibooks</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Tikidata</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Tikinews</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Tikiquote</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Tikisource</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Tikiversity</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Tikivoyage</a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-item">Tikitionary</a>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <!-- Carousel Section
+            NOTE : THIS WILL ONLY DISPLAY IN WIDTH OF 700px
+        -->
+        <article class="d-md-none bg-light text p-5 p-lg-0 pt-lg-5 align-text-bottom text-sm-start mt-5">
+            <section class="container">
+                <img src="img/small_slide_6.svg" alt="" class="img-fluid w-100">
+                <section class="carousel slide" data-bs-ride="carousel">
+                    <section class="carousel-inner text-center">
+                        <section class="carousel-item active">
+                            <h3>Welcome to Tikipedia</h3>
+                            <p>Learn how Tikipedia started and became a<br>reliable source of information</p>
+                        </section>
+                        <section class="carousel-item">
+                            <h3>How Tikipedia Works</h3>
+                            <p>Discover how users collaboration to ensure<br>accurate information.</p>
+                        </section>
+                        <section class="carousel-item">
+                            <h3>Impact of Tikipedia</h3>
+                            <p>Explore how Tikipedia has transformed<br>knowledge sharing.</p>
+                        </section>
+                        <section class="carousel-item">
+                            <h3>Tikipedia Controversies</h3>
+                            <p>Learn about controversies surrounding<br>Tikipedia's accuracy and bias.</p>
+                        </section>
+                        <section class="carousel-item">
+                            <h3>Tikipedia in Education</h3>
+                            <p>See how education and students use<br>Tikipedia's for research and writing.</p>
+                        </section>
+                    </section>
+                </section>
+                
+            </section>
+        </article>
+
+        <!-- Carousel Section 
+            NOTE : THIS WILL ONLY DISPLAY IN WIDTH OF 768px 
+        -->
+        <section class="d-none d-md-block hero-section carousel slide bg-dark pt-lg-5 p-5 mt-5" id="carouselExampleAutoplaying" data-bs-ride="carousel">
+            <section class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>    
+            </section>
+            <section class="carousel-inner">
+                <section class="carousel-item active">
+                    <img src="img/slide_1.svg" alt="" class="d-block mx-auto image-slide img-fluid w-50">
+                    <section class="carousel-caption d-block">
+                        <h3>History of Tikipedia</h3>
+                        <p>Learn how Tikipedia started and became a<br>reliable source of information</p>
+                    </section>
+                </section>
+                <section class="carousel-item">
+                    <img src="img/slide_2.svg" alt="" class="d-block mx-auto image-slide img-fluid w-50">
+                    <section class="carousel-caption d-block">
+                        <h3>How Tikipedia Works</h3>
+                        <p>Discover how users collaboration to ensure<br>accurate information.</p>
+                    </section>
+                </section>
+                <section class="carousel-item">
+                    <img src="img/slide_3.svg" alt="" class="d-block mx-auto image-slide img-fluid w-50">
+                    <section class="carousel-caption d-block">
+                        <h3>Impact of Tikipedia</h3>
+                        <p>Explore how Tikipedia has transformed<br>knowledge sharing.</p>
+                    </section>
+                </section>
+                <section class="carousel-item">
+                    <img src="img/slide_4.svg" alt="" class="d-block mx-auto image-slide img-fluid w-50">
+                    <section class="carousel-caption d-block">
+                        <h3>Tikipedia Controversies</h3>
+                        <p>Learn about controversies surrounding<br>Tikipedia's accuracy and bias.</p>
+                    </section>
+                </section>
+                <section class="carousel-item">
+                    <img src="img/slide_5.svg" alt="" class="d-block mx-auto image-slide img-fluid w-50">
+                    <section class="carousel-caption d-block">
+                        <h3>Tikipedia in Education</h3>
+                        <p>See how education and students use<br>Tikipedia's for research and writing.</p>
+                    </section>
+                </section>
+            </section>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </section>
+
+        <!-- End of Hero Section -->
+        
+
+        <!-- Article Sections -->
+        <article class="container p-md-5">
+            <section class="row mb-4">
+
+                <!-- Card One -->
+                <section class="col">
+                    <section class="card border-dark">
+                        <section class="card-header h5">From today's featured article</section>
+                        <!-- <img src="img/small_slide_6.svg" alt="" class="card-img-top"> -->
+                        <figure class="figure">
+                            <img src="img/articles/article_image_1.jpg" alt="" class="figure-img img-fluid">
+                            <figcaption class="figure-caption mx-3">Cast of It's That Man Again in 1944</figcaption>
+                        </figure>
+                        <section class="card-body">
+                            <section class="accordion" id="accordionPanelsStayOpenExample">
+                                <section class="accordion-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="" aria-controls="panelsStayOpen-collapseOne">
+                                            Read Article
+                                        </button>
+                                    </h2>
+                                    <section id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                                        <section class="accordion-body">
+                                            <a href="#" data-bs-toggle="tooltip" class="link">It's That Man Again</a> (ITMA) was a <a href="#" data-bs-toggle="tooltip" class="link">radio comedy</a> programme that was broadcast by the <a href="#" data-bs-toggle="tooltip" class="link">BBC</a> for twelve series from 1939 to 1949, featuring<br><a href="#" data-bs-toggle="tooltip" class="link">Tommy Handley</a> in the central role. ITMA was a character-driven comedy whose satirical targets included <a href="#" data-bs-toggle="tooltip" class="link">officialdom</a> and the proliferation of minor
+                                            wartime regulations. Parts of the scripts were rewritten in the hours before the broadcast, to ensure topicality. ITMA
+                                            was an important contributor to British morale during the war, with its cheerful take on the day-to-day preoccupations
+                                            of the public, but its detailed topicality—one of its greatest attractions at the time—has prevented it from wearing
+                                            well on repeated hearing. Handley died during the twelfth series, the remaining programmes of which were immediately
+                                            cancelled: ITMA could not work without him, and no further series were commissioned. ITMA's innovative structure was
+                                            successfully continued in comedy shows of the 1950s and 1960s, such as Take It from Here, The Goon Show and Round the Horne. (Full article...)
+                                        </section>
+                                    </section>
+                                </section>
+                                <section class="accordion-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="" aria-controls="panelsStayOpen-collapseTwo">
+                                            Recently Featured
+                                        </button>
+                                        <section id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                                            <section class="accordion-body list-group list-group-flush">
+                                                <a href="#" class="h6 list-group-item link link-no-line">Starship Troopers</a>
+                                                <a href="#" class="h6 list-group-item link link-no-line">James B. Weaver</a>
+                                                <a href="#" class="h6 list-group-item link link-no-line">Sumitro Djojohadikusumo</a>
+                                            </section>
+                                        </section>
+                                    </h2>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="card-footer text-center">
+                            <a href="#" class="card-link">Archive</a>
+                            <a href="#" class="card-link">By email</a>
+                            <a href="#" class="card-link">More featured articles</a>
+                            <a href="#" class="card-link">About</a>
+                        </section>
+                    </section>
+                </section>
+
+            </section>
+
+            <section class="row mb-4">
+                <section class="col">
+                    <!-- Card Two -->
+                    <section class="col">
+                        <section class="card border-dark">
+                            <section class="card-header h5">In the News</section>
+                            <!-- <img src="img/small_slide_6.svg" alt="" class="card-img-top"> -->
+                            <figure class="figure">
+                                <img src="img/articles/article_image_2.jpg" alt="" class="figure-img img-fluid">
+                                <figcaption class="figure-caption mx-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ducimus dignissimos nostrum tenetur consequatur adipisci.</figcaption>
+                            </figure>
+                            <section class="card-body">
+                                <section class="accordion" id="accordionPanelsStayOpenExample">
+                                    <section class="accordion-item">
+                                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#panelsStayOpen-collapseThree" aria-expanded=""
+                                                aria-controls="panelsStayOpen-collapseThree">
+                                                Read Article
+                                            </button>
+                                        </h2>
+                                        <section id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                            aria-labelledby="panelsStayOpen-headingThree">
+                                            <section class="accordion-body">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ad numquam nisi provident adipisci vel quaerat maxime quo modi dolore ut alias, iste sed, magni assumenda necessitatibus excepturi consequuntur quod sequi! Ipsum molestias perferendis molestiae vitae adipisci. Provident veniam, nam placeat et aperiam deleniti sint sequi dolorem architecto tempora blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quaerat minus ducimus numquam, quidem nemo labore animi nostrum, placeat reprehenderit vel repellat quasi excepturi doloremque facilis. Error asperiores consectetur, atque ea officiis necessitatibus maxime architecto quae doloremque quos cupiditate reiciendis quia vero neque suscipit esse temporibus inventore blanditiis corporis minus?
+                                            </section>
+                                        </section>
+                                    </section>
+                                    
+                                    <section class="accordion-item">
+                                        <h2 class="accordion-header" id="panelsStayOpen-HeadingFive">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="" aria-controls="panelsStayOpen-collapseFive">
+                                                Ongoing
+                                            </button>
+                                        </h2>
+                                        <section class="accordion-collapse collapse" id="panelsStayOpen-collapseFive" aria-labelledby="panelsStayOpen-headingFive">
+                                            <section class="accordion-body">
+                                                <a href="#" class="card-link">Lorem ipsum dolor sit amet.</a>
+                                            </section>
+                                        </section>
+                                    </section>
+
+                                    <section class="accordion-item">
+                                        <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="" aria-controls="panelsStayOpen-collapseFour">
+                                                Recent Deaths
+                                            </button>
+                                        </h2>
+                                        <section id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                                            aria-labelledby="panelsStayOpen-headingFour">
+                                            <section class="accordion-body list-group list-group-flush">
+                                                <a href="#" class="list-group-item link link-no-line">Lorem, ipsum dolor.</a>
+                                                <a href="#" class="list-group-item link link-no-line">Lorem ipsum dolor sit amet consectetur.</a>
+                                                <a href="#" class="list-group-item link link-no-line">Lorem, ipsum.</a>
+                                                <a href="#" class="list-group-item link link-no-line">Lorem, ipsum.</a>
+                                            </section>
+                                        </section>
+                                    </section>
+                                </section>
+                            </section>
+                            <section class="card-footer text-center">
+                                <a href="#" class="card-link">Archive</a>
+                                <a href="#" class="card-link">By email</a>
+                                <a href="#" class="card-link">More featured articles</a>
+                                <a href="#" class="card-link">About</a>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+            <section class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+
+                <!-- Card Three -->
+                <section class="col">
+                    <section class="card border-dark">
+                        <section class="row g-0">
+                            <section class="card-header h5">Did you know...</section>
+                            <!-- <img src="img/small_slide_6.svg" alt="" class="card-img-top"> -->
+                            <section class="col">
+                                <figure class="figure">
+                                    <img src="img/articles/article_image_3.jpg" alt="" class="figure-img img-fluid">
+                                    <figcaption class="figure-caption mx-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</figcaption>
+                                </figure>
+                            </section>
+                            <section class="col">
+                                <section class="card-body">
+                                    <section class="accordion" id="accordionPanelsStayOpenExample">
+                                        <section class="accordion-item">
+                                            <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#panelsStayOpen-collapseSix" aria-expanded=""
+                                                    aria-controls="panelsStayOpen-collapseSix">
+                                                    Read Article
+                                                </button>
+                                            </h2>
+                                            <section id="panelsStayOpen-collapseSix" class="accordion-collapse collapse show"
+                                                aria-labelledby="panelsStayOpen-headingSix">
+                                                <section class="accordion-body">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit soluta quisquam, fugit, quis sunt excepturi quas provident quos repellat rem atque, suscipit esse magnam explicabo? Eos ut tenetur commodi maiores repellat nemo in voluptas, architecto, ullam eaque nam. Deserunt, magni? Nam repudiandae aut corrupti distinctio debitis quis nulla expedita maiores!
+                                                </section>
+                                            </section>
+                                        </section>
+                                    </section>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="card-footer text-center">
+                            <a href="#" class="card-link">Archive</a>
+                            <a href="#" class="card-link">By email</a>
+                            <a href="#" class="card-link">More featured articles</a>
+                            <a href="#" class="card-link">About</a>
+                        </section>
+                    </section>
+                </section>
+
+                <!-- Card Four -->
+                <section class="col">
+                    <section class="card border-dark">
+                        <section class="card-header h5">On This Day</section>
+                        <figure class="figure">
+                            <img src="img/articles/article_image_4.jpg" alt="" class="figure-img img-fluid">
+                            <figcaption class="figure-caption mx-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi!</figcaption>
+                        </figure>
+                        <section class="card-body">
+                            <section class="accordion" id="accordionPanelsStayOpenExample">
+                                <section class="accordion-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="" aria-controls="panelsStayOpen-collapseSeven">
+                                            Read Article
+                                        </button>
+                                    </h2>
+                                    <section id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSeven">
+                                        <h5 class="card-title mx-3 my-3">March 12</h5>
+                                        <section class="accordion-body">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus corrupti fugiat neque velit accusamus omnis dolores sequi quibusdam consectetur. Facilis pariatur itaque officiis exercitationem ut, velit tempore, quidem eum ipsam voluptate blanditiis sequi cum? Odit autem iusto, facere placeat soluta ipsam quis nobis, quod provident reiciendis hic fugiat architecto officiis animi. Quos nam eius architecto facere quidem, repellendus non possimus delectus necessitatibus molestiae quo error cum ex deserunt temporibus sit ipsum voluptas eum voluptatibus numquam illo earum esse quaerat quia? Obcaecati officiis a optio, repellendus modi aliquam voluptate at aperiam reiciendis quam laborum quidem mollitia itaque aut voluptatibus velit, vero inventore excepturi sunt! Obcaecati aperiam incidunt, sunt dolores iste accusantium sint illum nostrum pariatur nobis, minima, laborum veniam? Repudiandae, saepe!
+                                        </section>
+                                    </section>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="card-footer text-center">
+                            <a href="#" class="card-link">Archive</a>
+                            <a href="#" class="card-link">By email</a>
+                            <a href="#" class="card-link">More featured articles</a>
+                            <a href="#" class="card-link">About</a>
+                        </section>
+                    </section>
+                </section>
+
+            </section>
+
+            <!-- Card Five -->
+            <section class="row mb-4">
+                <section class="col">
+                    <section class="card border-dark">
+                        <section class="card-header h5">From today's featured article</section>
+                        <!-- <img src="img/small_slide_6.svg" alt="" class="card-img-top"> -->
+                        <figure class="figure text-center">
+                            <img src="img/articles/article_image_5.jpg" alt="" class="figure-img img-fluid">
+                            <figcaption class="figure-caption mx-3">Photograph credit: Charles J. Sharp</figcaption>
+                        </figure>
+                        <section class="card-body">
+                            <section class="accordion" id="accordionPanelsStayOpenExample">
+                                <section class="accordion-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingEight">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#panelsStayOpen-collapseEight" aria-expanded=""
+                                            aria-controls="panelsStayOpen-collapseEight">
+                                            Read Article
+                                        </button>
+                                    </h2>
+                                    <section id="panelsStayOpen-collapseEight" class="accordion-collapse collapse show"
+                                        aria-labelledby="panelsStayOpen-headingEight">
+                                        <section class="accordion-body">
+                                            The rhesus macaque (Macaca mulatta), is a species of Old World monkey native to South, Central, and Southeast Asia. It
+                                            has the widest geographic range of all non-human primates, occupying a great diversity of altitudes and a great variety
+                                            of habitats, from grasslands to arid and forested areas, but also close to human settlements. Generally brown or grey in
+                                            colour, it is 47 to 53 cm (19 to 21 in) in length with a 20.7 to 22.9 cm (8.1 to 9.0 in) tail and weighs 5.3 to 7.7 kg
+                                            (12 to 17 lb). Due to its wide availability and biological similarity to humans, the rhesus macaque has been used
+                                            extensively in medical and biological research. It has facilitated breakthroughs including vaccines for rabies,
+                                            smallpox, and polio and antiretroviral medication to treat HIV/AIDS. A rhesus macaque became the first primate astronaut
+                                            in 1948, but died during the flight, followed on 14 June 1949 by Albert II, who became the first primate and first
+                                            mammal in space. This male rhesus macaque, of the subspecies M. m. mulatta, was photographed in the Gokarna Forest,
+                                            Nepal.
+                                        </section>
+                                    </section>
+                                </section>
+                                <section class="accordion-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingNine">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#panelsStayOpen-collapseNine" aria-expanded=""
+                                            aria-controls="panelsStayOpen-collapseNine">
+                                            Recently Featured
+                                        </button>
+                                        <section id="panelsStayOpen-collapseNine" class="accordion-collapse collapse"
+                                            aria-labelledby="panelsStayOpen-headingNine">
+                                            <section class="accordion-body list-group list-group-flush">
+                                                <a href="#" class="h6 list-group-item link link-no-line">Fishing vessel</a>
+                                                <a href="#" class="h6 list-group-item link link-no-line">Mount Ngauruhoe</a>
+                                                <a href="#" class="h6 list-group-item link link-no-line">Marie Stopes</a>
+                                            </section>
+                                        </section>
+                                    </h2>
+                                </section>
+                            </section>
+                        </section>
+                        <section class="card-footer text-center">
+                            <a href="#" class="card-link">Archive</a>
+                            <a href="#" class="card-link">More featured pictures</a>
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+        </article>
+
+        <!-- Other Areas of Wikipedia Section -->
+        <section class="bg-dark p-5 text-white">
+            <section class="container mx-auto">
+                <h2 class="text-center mb-4">Other Areas of Tikipedia</h2>
+                <section class="accordion">
+                    <section class="accordion accordion-flush">
+                
+                        <!-- Accordion Item 1 -->
+                        <section class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#areaOne">
+                                    <i class="bi bi-dot"></i> Community portal
+                                </button>
+                            </h2>
+                            <section id="areaOne" class="accordion-collapse collapse">
+                                <section class="accordion-body d-flex align-items-center justify-content-between">
+                                    <p class="lead my-auto">The central hub for editors, with resources, links, tasks, and announcements.</p>
+                                    <button class="btn btn-primary px-4">Visit</button>
+                                </section>
+                            </section>
+                        </section>
+                
+                        <!-- Accordion Item 2 -->
+                        <section class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#areaTwo">
+                                    <i class="bi bi-dot"></i> Village pump
+                                </button>
+                            </h2>
+                            <section id="areaTwo" class="accordion-collapse collapse">
+                                <section class="accordion-body d-flex align-items-center justify-content-between">
+                                    <p class="lead my-auto">Forum for discussions about Wikipedia itself, including policies and technical issues.</p>
+                                    <button class="btn btn-primary px-4">Visit</button>
+                                </section>
+                            </section>
+                        </section>
+                
+                        <!-- Accordion Item 3 -->
+                        <section class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#areaThree">
+                                    <i class="bi bi-dot"></i> Site news
+                                </button>
+                            </h2>
+                            <section id="areaThree" class="accordion-collapse collapse">
+                                <section class="accordion-body d-flex align-items-center justify-content-between">
+                                    <p class="lead my-auto">Sources of news about Wikipedia and the broader Wikimedia movement.</p>
+                                    <button class="btn btn-primary px-4">Visit</button>
+                                </section>
+                            </section>
+                        </section>
+                
+                        <!-- Accordion Item 4 -->
+                        <section class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#areaFour">
+                                    <i class="bi bi-dot"></i> Teahouse
+                                </button>
+                            </h2>
+                            <section id="areaFour" class="accordion-collapse collapse">
+                                <section class="accordion-body d-flex align-items-center justify-content-between">
+                                    <p class="lead my-auto">Ask basic questions about using or editing Wikipedia.</p>
+                                    <button class="btn btn-primary px-4">Visit</button>
+                                </section>
+                            </section>
+                        </section>
+                
+                        <!-- Accordion Item 5 -->
+                        <section class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#areaFive">
+                                    <i class="bi bi-dot"></i> Help desk
+                                </button>
+                            </h2>
+                            <section id="areaFive" class="accordion-collapse collapse">
+                                <section class="accordion-body d-flex align-items-center justify-content-between">
+                                    <p class="lead my-auto">Ask questions about using or editing Wikipedia.</p>
+                                    <button class="btn btn-primary px-4">Visit</button>
+                                </section>
+                            </section>
+                        </section>
+                
+                        <!-- Accordion Item 6 -->
+                        <section class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#areaSix">
+                                    <i class="bi bi-dot"></i> Reference desk
+                                </button>
+                            </h2>
+                            <section id="areaSix" class="accordion-collapse collapse">
+                                <section class="accordion-body d-flex align-items-center justify-content-between">
+                                    <p class="lead my-auto">Ask research questions about encyclopedic topics.</p>
+                                    <button class="btn btn-primary px-4">Visit</button>
+                                </section>
+                            </section>
+                        </section>
+                
+                        <!-- Accordion Item 7 -->
+                        <section class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#areaSeven">
+                                    <i class="bi bi-dot"></i> Content portals
+                                </button>
+                            </h2>
+                            <section id="areaSeven" class="accordion-collapse collapse">
+                                <section class="accordion-body d-flex align-items-center justify-content-between">
+                                    <p class="lead my-auto">A unique way to navigate the encyclopedia.</p>
+                                    <button class="btn btn-primary px-4">Visit</button>
+                                </section>
+                            </section>
+                        </section>
+                
+                    </section>
+                </section>
+            </section>
+        </section>
+
+        <section class="p-5 bg-primary">
+            <section class="container">
+                <h2 class="text-center mb-4 text-light">Tikipedia's sister projects</h2>
+                <section class="row row-cols-1 row-cols-md-4 g-4 text-center">
+                    <section class="col">
+                        <section class="card h-100">
+                            <section class="card-body text-center">
+                                <img src="img/logo/logo_1.webp" alt="" class="img-fluid">
+                            </section>
+                            <h2 class="card-title mb-3 btn text-primary other-area-header">Commons</h2>
+                            <p class="card-text mb-4">Free media repository</p>
+                        </section>
+                    </section>
+
+                    <section class="col">
+                        <section class="card h-100">
+                            <section class="card-body text-center">
+                                <img src="img/logo/logo_2.webp" alt="" class="img-fluid">
+                            </section>
+                            <h2 class="card-title mb-3 btn text-primary other-area-header">MediaTiki</h2>
+                            <p class="card-text mb-4">Tiki software development</p>
+                        </section>
+                    </section>
+                    
+                    <section class="col">
+                        <section class="card h-100">
+                            <section class="card-body text-center">
+                                <img src="img/logo/logo_3.webp" alt="" class="img-fluid">
+                            </section>
+                            <h2 class="card-title mb-3 btn text-primary other-area-header">MetaTiki</h2>
+                            <p class="card-text mb-4">Tikimedia project coordination</p>
+                        </section>
+                    </section>
+
+                    <section class="col">
+                        <section class="card h-100">
+                            <section class="card-body text-center">
+                                <img src="img/logo/logo_4.webp" alt="" class="img-fluid">
+                            </section>
+                            <h2 class="card-title mb-3 btn text-primary other-area-header">TikiBooks</h2>
+                            <p class="card-text mb-4">Free textbooks and manuals</p>
+                        </section>
+                    </section>
+
+                    <section class="col">
+                        <section class="card h-100">
+                            <section class="card-body text-center">
+                                <img src="img/logo/logo_5.webp" alt="" class="img-fluid">
+                            </section>
+                            <h2 class="card-title mb-3 btn text-primary other-area-header">Tikidata</h2>
+                            <p class="card-text mb-4">Free knowledge base</p>
+                        </section>
+                    </section>
+
+                    <section class="col">
+                        <section class="card h-100">
+                            <section class="card-body text-center">
+                                <img src="img/logo/logo_6.webp" alt="" class="img-fluid">
+                            </section>
+                            <h2 class="card-title mb-3 btn text-primary other-area-header">Tikinews</h2>
+                            <p class="card-text mb-4">Free-content news</p>
+                        </section>
+                    </section>
+
+                    <section class="col">
+                        <section class="card h-100">
+                            <section class="card-body text-center">
+                                <img src="img/logo/logo_7.webp" alt="" class="img-fluid">
+                            </section>
+                            <h2 class="card-title mb-3 btn text-primary other-area-header">Tikiquote</h2>
+                            <p class="card-text mb-4">Collection of quotations</p>
+                        </section>
+                    </section>
+
+                    <section class="col">
+                        <section class="card h-100">
+                            <section class="card-body text-center">
+                                <img src="img/logo/logo_8.webp" alt="" class="img-fluid">
+                            </section>
+                            <h2 class="card-title mb-3 btn text-primary other-area-header">Tikisource</h2>
+                            <p class="card-text mb-4">Free-content library</p>
+                        </section>
+                    </section>
+
+                    <section class="col">
+                        <section class="card h-100">
+                            <section class="card-body text-center">
+                                <img src="img/logo/logo_9.webp" alt="" class="img-fluid">
+                            </section>
+                            <h2 class="card-title mb-3 btn text-primary other-area-header">Tikispecies</h2>
+                            <p class="card-text mb-4">Directory of species</p>
+                        </section>
+                    </section>
+
+                    <section class="col">
+                        <section class="card h-100">
+                            <section class="card-body text-center">
+                                <img src="img/logo/logo_10.webp" alt="" class="img-fluid">
+                            </section>
+                            <h2 class="card-title mb-3 btn text-primary other-area-header">Tikiversity</h2>
+                            <p class="card-text mb-4">Free learning tools</p>
+                        </section>
+                    </section>
+
+                    <section class="col">
+                        <section class="card h-100">
+                            <section class="card-body text-center">
+                                <img src="img/logo/logo_11.webp" alt="" class="img-fluid">
+                            </section>
+                            <h2 class="card-title mb-3 btn text-primary other-area-header">Tikivoyage</h2>
+                            <p class="card-text mb-4">Free travel guide</p>
+                        </section>
+                    </section>
+
+                    <section class="col">
+                        <section class="card h-100">
+                            <section class="card-body text-center">
+                                <img src="img/logo/logo_12.webp" alt="" class="img-fluid">
+                            </section>
+                            <h2 class="card-title mb-3 btn text-primary other-area-header">Tikitionary</h2>
+                            <p class="card-text mb-4">Dictionary and thesaurus</p>
+                        </section>
+                    </section>
+
+                </section>
+            </section>
+        </section>
+
+        <!-- Tikipedia Languages Section-->
+        <section class="p-5">
+            <section class="container">
+                <h2 class="text-center">Tikipedia languages</h2>
+                <h6 class="text-center mb-4">This Wikipedia is written in English. Many other Wikipedias are available; some of the largest are listed below.</h6>
+
+                <!-- Article 1 -->
+                <section class="hr-text mb-3">
+                    <hr class="line">
+                    <p>1,000,000+ articles</p>
+                    <hr>
+                </section>
+                <section class="d-flex flex-wrap align-content-center justify-content-center g-4 mb-4">
+                    <a href="#" class="link">العربية</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Deutsch</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Español</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Français</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Italiano</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Nederlands</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">日本語</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Polski</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Português</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Русский</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Svenska</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Українська</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Tiếng Việt</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">中文</a>
+                </section>
+
+                <!-- Article 2 -->
+                <section class="hr-text mb-3">
+                    <hr class="line">
+                    <p>250,000+ articles</p>
+                    <hr>
+                </section>
+                <section class="d-flex flex-wrap align-content-center justify-content-center g-4 mb-4">
+                    <a href="#" class="link">Bahasa Indonesia</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Bahasa Melayu</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Bân-lâm-gú</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Български</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Català</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Čeština</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Dansk</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Esperanto</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Euskara</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">فارسی</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">עברית</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">한국어</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Magyar</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Norsk Bokmål</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Română</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Srpski</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Srpskohrvatski</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Suomi</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Türkçe</a>
+                </section>
+                
+                <!-- Article 3 -->
+                <section class="hr-text mb-3">
+                    <hr class="line">
+                    <p>50,000+ articles</p>
+                    <hr>
+                </section>
+                <section class="d-flex flex-wrap align-content-center justify-content-center g-4 mb-4">
+                    <a href="#" class="link">Asturianu</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">বাংলা</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Bosanski</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Eesti</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Ελληνικά</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Simple English</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Gaeilge</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Galego</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Hrvatski</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">ქართული</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Latviešu</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Lietuvių</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">മലയാളം</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Македонски</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Norsk nynorsk</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Shqip</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Slovenčina</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">Slovenščina</a>
+                    <i class="bi bi-dot text-muted"></i>
+                    <a href="#" class="link">ไทย</a>
+                </section>
+
+            </section>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark p-5">
+
+        <section class="container text-secondary mb-4">
+            <p class="h6 mb-5">Text is available under the <a href="#" class="link text-">Creative Commons Attribution-ShareAlike License 3.0</a>; additional terms may apply. By using
+            this site, you agree to the <a href="#" class="link text-">Terms of Use</a> and <a href="#" class="link text-">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="#" class="link text-">Tikimedia
+            Foundation, Inc.</a>, a non-profit organization.</p>
+
+            <section class="d-flex flex-wrap align-items-center justify-content-between footer-links">
+                <ul class="d-flex justify-content-start gap-3 flex-wrap align-items-center">
+                    <li><a href="#" class="link">Privacy policy</a></li>
+                    <li><a href="#" class="link">About Tikipedia</a></li>
+                    <li><a href="#" class="link">Disclaimers</a></li>
+                    <li><a href="#" class="link">Contact Tikipedia</a></li>
+                    <li><a href="#" class="link">Mobile view</a></li>
+                    <li><a href="#" class="link">Developers</a></li>
+                </ul>
+                <section class="buttons d-flex flex-wrap justify-content-sm-start align-content-center">
+                    <button class="btn">
+                        <img src="img/footer-buttons/wikimedia-button.png" alt="">
+                    </button>
+                    <button class="btn">
+                        <img src="img/footer-buttons/wikimedia-button_1.png" alt="">
+                    </button>
+                </section>
+            </section>
+        </section>
+
+    </footer>
+    
+</body>
+</html> 
